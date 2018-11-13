@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Exercises1</string>
+    <string name="zadacha1_uslovie">поменять местами значения \n a и b</string>
 </resources>
