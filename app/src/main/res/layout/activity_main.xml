@@ -23,6 +23,16 @@
         android:layout_marginTop="16dp"
         android:text="1"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/zadacha2"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_zadachi" />
+
+    <Button
+        android:id="@+id/zadacha2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@+id/zadacha1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_zadachi" />
 

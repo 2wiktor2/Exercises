@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Exercises1</string>
     <string name="zadacha1_uslovie">поменять местами значения \n a и b</string>
+    <string name="zadacha2_uslovie">Дано трёхзначное число. Найти произведение чисел.</string>
 </resources>
