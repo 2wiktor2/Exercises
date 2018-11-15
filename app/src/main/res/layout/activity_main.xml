@@ -33,6 +33,25 @@
         android:layout_marginTop="16dp"
         android:text="2"
         app:layout_constraintLeft_toRightOf="@+id/zadacha1"
+        app:layout_constraintRight_toLeftOf="@id/zadacha3"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_zadachi" />
+
+    <Button
+        android:id="@+id/zadacha3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="3"
+        app:layout_constraintLeft_toRightOf="@+id/zadacha2"
+        app:layout_constraintRight_toLeftOf="@+id/zadacha4"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_zadachi" />
+    <Button
+        android:id="@+id/zadacha4"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="4"
+        app:layout_constraintLeft_toRightOf="@+id/zadacha3"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_zadachi" />
 

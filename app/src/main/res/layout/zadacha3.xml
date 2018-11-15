@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".Zadacha3">
 
+    <TextView
+        android:id="@+id/text_view_zadacha3_uslovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/zadacha3_uslovie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="Ввести трехзначное число"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_zadacha3_uslovie" />
+
+    <TextView
+        android:id="@+id/text_view_changedA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Результат"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="@id/editTextA"
+        app:layout_constraintRight_toRightOf="@id/editTextA"
+        app:layout_constraintTop_toBottomOf="@+id/editTextA" />
+
+
+    <Button
+        android:id="@+id/button_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Calculate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_changedA"/>
+
 </android.support.constraint.ConstraintLayout>
