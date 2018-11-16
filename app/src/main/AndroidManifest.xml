@@ -20,7 +20,8 @@
         <activity android:name=".AndroidZadacha1" />
         <activity android:name=".Zadacha2" />
         <activity android:name=".Zadacha3" />
-        <activity android:name=".Zadacha4"></activity>
+        <activity android:name=".Zadacha4" />
+        <activity android:name=".Zadacha5"></activity>
     </application>
 
 </manifest>

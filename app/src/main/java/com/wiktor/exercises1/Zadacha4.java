@@ -50,16 +50,14 @@ public class Zadacha4 extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "кнопка работает. И это очень радует!!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "кнопка работает. И это очень радует!!!", Toast.LENGTH_SHORT).show();
 
         String s1 = inNumber1.getText().toString();
         String s2 = inNumber2.getText().toString();
         String s3 = inNumber3.getText().toString();
 
 
-        if (!s1.equals("") ||
-                !s2.equals("") ||
-                !s2.equals("")) {
+        if (!s1.equals("") || !s2.equals("") || !s2.equals("")) {
 
             a = Integer.parseInt(s1);
             b = Integer.parseInt(s2);
