@@ -10,12 +10,13 @@ import android.widget.Toast;
 
 public class Zadacha5 extends AppCompatActivity implements View.OnClickListener {
 
-    EditText numberOfMonthIN;
-    Button button1;
-    TextView result1, result2;
+    EditText numberOfMonthIN, seasonName;
+    Button button1, button2;
+    TextView result1, result2, result3;
 
     private int number1;
     String numberOfMonth;
+    String seasonFromUser;
 
 
     @Override
@@ -24,24 +25,43 @@ public class Zadacha5 extends AppCompatActivity implements View.OnClickListener 
         setContentView(R.layout.zadacha5);
 
         numberOfMonthIN = findViewById(R.id.edit_text1);
+        seasonName = findViewById(R.id.edit_text2);
+
         button1 = findViewById(R.id.B1);
+        button2 = findViewById(R.id.B2);
+
         result1 = findViewById(R.id.text_view_result1);
         result2 = findViewById(R.id.text_view_resultSeason);
+        result3 = findViewById(R.id.text_view_result3);
+
 
         button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(this, "Klick!!!", Toast.LENGTH_SHORT).show();
+        switch (v.getId()) {
+            case R.id.B1:
+                Toast.makeText(this, "Klick B1!!!", Toast.LENGTH_SHORT).show();
 
-        if (getAndSetNumber()) {
-            result1.setText("Введите номер месяца");
-        } else {
-            number1 = Integer.parseInt(numberOfMonth);
-            choiсeMounth(number1);
-            choiceSeason(number1);
+                if (getAndSetNumber()) {
+                    result1.setText("Введите номер месяца");
+                } else {
+                    number1 = Integer.parseInt(numberOfMonth);
+                    choiсeMonth(number1);
+                    choiceSeason(number1);
+                    break;
+                }
+            case R.id.B2:
+                Toast.makeText(this, "Klick B2!!!", Toast.LENGTH_SHORT).show();
 
+
+                if (!seasonName.getText().toString().equals("")) {
+                    seasonFromUser = seasonName.getText().toString();
+                    choceSeason2(seasonFromUser);
+
+                } else result3.setText("Введите название сезона!");
         }
     }
 
@@ -50,10 +70,29 @@ public class Zadacha5 extends AppCompatActivity implements View.OnClickListener 
         // Получить число из EditText
         numberOfMonth = numberOfMonthIN.getText().toString();
         return numberOfMonthIN.getText().toString().equals("");
+    }
+
+    public void choceSeason2(String seasonFromUser) {
+        switch (seasonFromUser) {
+            case "зима":
+                result3.setText("Декабрь, Январь, Февраль");
+                break;
+            case "весна":
+                result3.setText("Март, Апрель, Май");
+                break;
+            case "лето":
+                result3.setText("Июнь, Июль, Август");
+                break;
+            case "осень":
+                result3.setText("Сентябрь, Октябрь, Ноябрь");
+                break;
+            default:
+        }
+
 
     }
 
-    public void choiсeMounth(int number1) {
+    public void choiсeMonth(int number1) {
         switch (number1) {
             case 1:
                 result1.setText("Январь");

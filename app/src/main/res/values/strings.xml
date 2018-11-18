@@ -15,4 +15,7 @@
     <string name="zadacha5_uslovie1">
         Ввести номер месяца.  \n
         Получить название месяца и сезон года.</string>
+    <string name="zadacha5_uslovie2">
+        Ввести название сезона года.  \n
+        Получить месяцы этого сезона.</string>
 </resources>
