@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button exercise1, exercise2, exercise3,exercise4,exercise5;
+    Button exercise1, exercise2, exercise3,exercise4,exercise5, exercise6 ;
     Button exerciseAndroid1;
 
 
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         exercise3 = findViewById(R.id.zadacha3);
         exercise4 = findViewById(R.id.zadacha4);
         exercise5 = findViewById(R.id.zadacha5);
+        exercise6 = findViewById(R.id.zadacha6);
 
         exerciseAndroid1 = findViewById(R.id.android_zadacha1);
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         exercise3.setOnClickListener(this);
         exercise4.setOnClickListener(this);
         exercise5.setOnClickListener(this);
+        exercise6.setOnClickListener(this);
         exerciseAndroid1.setOnClickListener(this);
     }
 
@@ -55,6 +57,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.zadacha5:
                 Intent intent_zadacha5 = new Intent(this, Zadacha5.class);
                 startActivity(intent_zadacha5);
+                break;
+                case R.id.zadacha6:
+                Intent intent_zadacha6 = new Intent(this, Zadacha6.class);
+                startActivity(intent_zadacha6);
                 break;
 
             case R.id.android_zadacha1:

@@ -131,7 +131,7 @@ public class Zadacha5 extends AppCompatActivity implements View.OnClickListener 
                 result1.setText("Декабрь");
                 break;
             default:
-                result1.setText("Введите номер месяца от1 до 12");
+                result1.setText("Введите номер месяца от 1 до 12");
         }
     }
 
