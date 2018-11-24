@@ -21,10 +21,10 @@ public class Zadacha6 extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.zadacha6);
 
-        num1=findViewById(R.id.edit_text1);
-        num2=findViewById(R.id.edit_text2);
-        buttonX=findViewById(R.id.button1);
-        textViewBottom=findViewById(R.id.text_view_bottom);
+        num1 = findViewById(R.id.edit_text1);
+        num2 = findViewById(R.id.edit_text2);
+        buttonX = findViewById(R.id.button1);
+        textViewBottom = findViewById(R.id.text_view_bottom);
 
         buttonX.setOnClickListener(this);
 
@@ -33,9 +33,9 @@ public class Zadacha6 extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         numb1 = Integer.parseInt(num1.getText().toString());
-        if (!num1.getText().toString().equals("")){
+        if (!num1.getText().toString().equals("")) {
 
-            textViewBottom.setText(""+numb1);
+            textViewBottom.setText("" + numb1);
         } else textViewBottom.setText("Введите число");
 
     }
