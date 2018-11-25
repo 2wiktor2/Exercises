@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button exercise1, exercise2, exercise3,exercise4,exercise5, exercise6 ;
     Button exerciseAndroid1;
+    Button exerciseAndroid2;
 
 
     @Override
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         exercise6 = findViewById(R.id.zadacha6);
 
         exerciseAndroid1 = findViewById(R.id.android_zadacha1);
+        exerciseAndroid2 = findViewById(R.id.android_zadacha2);
 
         exercise1.setOnClickListener(this);
         exercise2.setOnClickListener(this);
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         exercise5.setOnClickListener(this);
         exercise6.setOnClickListener(this);
         exerciseAndroid1.setOnClickListener(this);
+        exerciseAndroid2.setOnClickListener(this);
     }
 
     @Override
@@ -66,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.android_zadacha1:
                 Intent intent_android_zadacha1 = new Intent(this, AndroidZadacha1.class);
                 startActivity(intent_android_zadacha1);
+                break;
+                case R.id.android_zadacha2:
+                Intent intent_android_zadacha2 = new Intent(this, AndroidZadacha1.class);
+                startActivity(intent_android_zadacha2);
                 break;
         }
     }

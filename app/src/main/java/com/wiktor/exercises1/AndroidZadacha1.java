@@ -11,9 +11,7 @@ import android.widget.Toast;
 
 public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickListener {
 
-    Button buttonDialog1, buttonDialog2;
-    ImageButton buttonInfo;
-    private Object DialogInterface;
+    private ImageButton buttonInfo;
 
 
     @Override
@@ -21,12 +19,18 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.android_zadacha1);
 
-        buttonDialog1 = findViewById(R.id.button_dialog1);
-        buttonDialog2 = findViewById(R.id.button_dialog2);
+        Button buttonDialog1 = findViewById(R.id.button_dialog1);
+        Button buttonDialog2 = findViewById(R.id.button_dialog2);
+        Button buttonDialog3 = findViewById(R.id.button_dialog3);
+        Button buttonDialog4 = findViewById(R.id.button_dialog4);
+        Button buttonDialog5 = findViewById(R.id.button_dialog5);
         buttonInfo = findViewById(R.id.button_info);
 
         buttonDialog1.setOnClickListener(this);
         buttonDialog2.setOnClickListener(this);
+        buttonDialog3.setOnClickListener(this);
+        buttonDialog4.setOnClickListener(this);
+        buttonDialog5.setOnClickListener(this);
         buttonInfo.setOnClickListener(this);
 
         buttonInfo.setOnLongClickListener(new View.OnLongClickListener() {
@@ -34,8 +38,7 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
             public boolean onLongClick(View v) {
                 Toast.makeText(AndroidZadacha1.this,
                         "Вы очень долго жали на кнопку",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                        Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -51,10 +54,78 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
             case R.id.button_dialog2:
                 onCreateAlertDialog2Buttons();
                 break;
+            case R.id.button_dialog3:
+                createListDialog();
+                break;
+            case R.id.button_dialog4:
+                createSingleChoiceDialog();
+                break;
+            case R.id.button_dialog5:
+
+                break;
             case R.id.button_info:
+                createInfoDialog();
                 break;
         }
+    }
 
+    private void createListDialog() {
+        final String[] myColorsOfBackground = {"Синий", "Зеленый", "Оранжевый", "Красный"};
+        AlertDialog.Builder dialogList = new AlertDialog.Builder(this);
+        dialogList.setTitle("Смена цвета фона активити")
+                .setItems(myColorsOfBackground, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
+                        // Разобрать как менять цвет фона активити
+                        Toast.makeText(AndroidZadacha1.this, "Выбран цвет :" + myColorsOfBackground[item], Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setCancelable(false)
+                .show();
+    }
+
+    private void createSingleChoiceDialog() {
+        final String[] myColorsOfBackground2 = {"Синий", "Зеленый", "Оранжевый", "Красный", "Черный", "Белый"};
+        final AlertDialog.Builder dialogList = new AlertDialog.Builder(this);
+        dialogList.setTitle("Смена цвета фона активити")
+                .setSingleChoiceItems(myColorsOfBackground2, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(AndroidZadacha1.this, "Выбран цвет :" + myColorsOfBackground2[which], Toast.LENGTH_SHORT).show();
+
+                    }
+                })
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+// что-то сделать не работает dialogList.cancel();
+                    }
+                })
+                .setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //dialogList.cancel();
+                        // что-то сделать
+
+                    }
+                })
+                .setCancelable(true)
+                .show();
+    }
+
+    private void createInfoDialog() {
+        AlertDialog.Builder dialogInfo = new AlertDialog.Builder(this);
+        dialogInfo.setTitle("Диалог 1")
+                .setMessage(R.string.infoDialogText)
+                .setCancelable(false)
+                .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = dialogInfo.create();
+        alert.show();
     }
 
 
@@ -71,7 +142,6 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
                 });
         AlertDialog alert = dialog.create();
         alert.show();
-
     }
 
 
@@ -83,29 +153,33 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(AndroidZadacha1.this, "Нажата кнопка OK", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AndroidZadacha1.this, "Нажата кнопка OK",
+                                Toast.LENGTH_SHORT).show();
                     }
                 })
-
+                .setNeutralButton("Midle Button", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(android.content.DialogInterface dialog, int which) {
+                        Toast.makeText(AndroidZadacha1.this, "Нажата средняя кнопка",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                })
                 .setNegativeButton("Cencel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(android.content.DialogInterface dialog, int which) {
-                        Toast.makeText(AndroidZadacha1.this, "Нажата кнопка Cancel", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(AndroidZadacha1.this, "Нажата кнопка Cancel",
+                                Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(android.content.DialogInterface dialog) {
-                        Toast.makeText(AndroidZadacha1.this, "Вы ничего не выбрали", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(AndroidZadacha1.this, "Вы ничего не выбрали",
+                                Toast.LENGTH_SHORT).show();
                     }
                 })
                 .show();
-
-
     }
-
 
 }
 
