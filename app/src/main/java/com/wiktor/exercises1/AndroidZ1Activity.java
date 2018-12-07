@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickListener {
+public class AndroidZ1Activity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton buttonInfo;
 
@@ -36,7 +36,7 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
         buttonInfo.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Toast.makeText(AndroidZadacha1.this,
+                Toast.makeText(AndroidZ1Activity.this,
                         "Вы очень долго жали на кнопку",
                         Toast.LENGTH_SHORT).show();
                 return false;
@@ -77,7 +77,7 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
                     @Override
                     public void onClick(DialogInterface dialog, int item) {
                         // Разобрать как менять цвет фона активити
-                        Toast.makeText(AndroidZadacha1.this, "Выбран цвет :" + myColorsOfBackground[item], Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AndroidZ1Activity.this, "Выбран цвет :" + myColorsOfBackground[item], Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setCancelable(false)
@@ -91,7 +91,7 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
                 .setSingleChoiceItems(myColorsOfBackground2, -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(AndroidZadacha1.this, "Выбран цвет :" + myColorsOfBackground2[which], Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AndroidZ1Activity.this, "Выбран цвет :" + myColorsOfBackground2[which], Toast.LENGTH_SHORT).show();
 
                     }
                 })
@@ -153,28 +153,28 @@ public class AndroidZadacha1 extends AppCompatActivity implements View.OnClickLi
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(AndroidZadacha1.this, "Нажата кнопка OK",
+                        Toast.makeText(AndroidZ1Activity.this, "Нажата кнопка OK",
                                 Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setNeutralButton("Midle Button", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(android.content.DialogInterface dialog, int which) {
-                        Toast.makeText(AndroidZadacha1.this, "Нажата средняя кнопка",
+                        Toast.makeText(AndroidZ1Activity.this, "Нажата средняя кнопка",
                                 Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setNegativeButton("Cencel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(android.content.DialogInterface dialog, int which) {
-                        Toast.makeText(AndroidZadacha1.this, "Нажата кнопка Cancel",
+                        Toast.makeText(AndroidZ1Activity.this, "Нажата кнопка Cancel",
                                 Toast.LENGTH_SHORT).show();
                     }
                 })
                 .setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(android.content.DialogInterface dialog) {
-                        Toast.makeText(AndroidZadacha1.this, "Вы ничего не выбрали",
+                        Toast.makeText(AndroidZ1Activity.this, "Вы ничего не выбрали",
                                 Toast.LENGTH_SHORT).show();
                     }
                 })

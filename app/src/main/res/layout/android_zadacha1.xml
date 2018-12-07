@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainBackgroundColor"
-    tools:context=".AndroidZadacha1">
+    tools:context=".AndroidZ1Activity">
 
     <Button
         android:id="@+id/button_dialog1"

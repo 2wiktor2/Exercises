@@ -18,6 +18,8 @@ public class Zadacha5 extends AppCompatActivity implements View.OnClickListener 
     String numberOfMonth;
     String seasonFromUser;
 
+    char[] chars1 = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

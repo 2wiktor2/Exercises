@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button exercise1, exercise2, exercise3,exercise4,exercise5, exercise6 ;
     Button exerciseAndroid1;
     Button exerciseAndroid2;
+    Button exerciseAndroid3;
 
 
     @Override
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         exerciseAndroid1 = findViewById(R.id.android_zadacha1);
         exerciseAndroid2 = findViewById(R.id.android_zadacha2);
+        exerciseAndroid3 = findViewById(R.id.android_zadacha3);
 
         exercise1.setOnClickListener(this);
         exercise2.setOnClickListener(this);
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         exercise6.setOnClickListener(this);
         exerciseAndroid1.setOnClickListener(this);
         exerciseAndroid2.setOnClickListener(this);
+        exerciseAndroid3.setOnClickListener(this);
     }
 
     @Override
@@ -67,12 +70,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.android_zadacha1:
-                Intent intent_android_zadacha1 = new Intent(this, AndroidZadacha1.class);
+                Intent intent_android_zadacha1 = new Intent(this, AndroidZ1Activity.class);
                 startActivity(intent_android_zadacha1);
                 break;
                 case R.id.android_zadacha2:
-                Intent intent_android_zadacha2 = new Intent(this, AndroidZadacha1.class);
+                Intent intent_android_zadacha2 = new Intent(this, AndroidZ2Activity.class);
                 startActivity(intent_android_zadacha2);
+                break;
+                case R.id.android_zadacha3:
+                Intent intent_android_zadacha3 = new Intent(this, AndroidZ3Activity.class);
+                startActivity(intent_android_zadacha3);
                 break;
         }
     }

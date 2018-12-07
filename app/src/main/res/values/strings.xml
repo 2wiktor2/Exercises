@@ -21,4 +21,7 @@
     <string name="infoDialogText">Испытания на практике диалоговых окон \n
     slfkgjflgkjdfglkjdfglk\n
      в несколько строк</string>
+    <string-array name="chars1">
+        <item>a</item>
+    </string-array>
 </resources>
